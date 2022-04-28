@@ -1,0 +1,320 @@
+@font-face {
+  font-family: "opensans";
+  src: url("fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"),
+    url("fonts/open-sans/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "opensans";
+  src: url("fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"),
+    url("fonts/open-sans/opensans-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: optional;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.drop{
+  z-index: 9999;
+}
+
+/* Body properties that should generally be matched 
+with other html pages in the site. */
+body {
+  margin: 10px;
+  background: radial-gradient(#efb509, #cd7213);
+  overflow: auto;
+  height: 250vh;
+}
+.form-group {
+  margin-left: 1rem;
+}
+.name {
+  color: #ec9333;
+  text-shadow: 2px 2px 0px #200c0c;
+
+}
+.basic-container{
+  grid-template-columns: auto auto;
+  display: inline-grid;
+  width: 40%; 
+}
+/* Cards */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #eebc4f;
+  overflow: hidden;
+  background-color: #3a638a;
+}
+.card_header, .card_body{
+  padding: 2rem 3rem;
+  color: #dda80a;
+}
+.card-primary .card_header{
+  background-color: #16253d;
+  color: #efb509;
+}
+/* quotes */
+.quote{
+  font-size: 2rem;
+  font-style: italic;
+  color: rgb(88, 50, 110);
+  line-height: 1.3;
+  text-align: center;
+}
+
+.quote_text::before{
+  content: open-quote;
+}
+.quote_text::after{
+  content: close-quote;
+}
+.quote_author{
+  font-size: 2.4rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0%;
+  text-align: center;
+}
+.quote_author::before{
+  content:”\003e”;
+}
+/* Grids */
+
+
+/* Nav bar style setting for all pages. */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #002c54;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  /* z-index: 9999; */
+}
+.single {
+  /* background-image: url("images/bridge.jpg"); */
+  background-position: 50% 30%;
+  background-size: cover;
+  height: 210px;
+  border: 10px solid #002c54;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+/* Code for button style on page one along with the 
+hover code*/
+.btn1 {
+  background-color: #16253d;
+  color: #eebc4f;
+  border: 2px solid #16253d;
+  position: relative;
+  
+  align-self: center;
+  width: 400px;
+  height: 75px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  top: 1rem;
+  margin-left: 3rem;
+}
+.btn1:hover {
+  background-color: #eebc4f;
+  color: #16253d;
+  border: 2px solid #16253d;
+}
+/*display for a profile picture.*/
+.profile {
+  /* display: block; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: 25%;
+  border: 5px solid #002c54;
+  border-radius: 150px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  
+}
+
+/*Container class to hold multiple objects.*/
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+/*Clear class*/
+.clear {
+  clear: both;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  /* height: 50rem; */
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*Different button variations.*/
+.button-one {
+  background-color: #16253d;
+  position: relative;
+  top: 9rem;
+}
+.button-two {
+  background-color: #16253d;
+  position: relative;
+  top: 9rem;
+}
+.button-three {
+  background-color: #16253d;
+  position: relative;
+  top: 29rem;
+}
+p {
+  color: #16253d;
+}
+li {
+  float: left;
+  color: #cd7213;
+
+  list-style-type: none;
+}
+.banner_list{
+  background-color: transparent;
+  display: inline;
+list-style: none;
+}
+.li-2 {
+  margin-left: 21rem;
+  margin-top: 3rem;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/*General styling for an outline for text.*/
+.outline {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+em {
+  color: #16253d;
+  font-style: normal;
+  font-family: fantasy;
+  font-size: 20px;
+  border-radius: 20px;
+}
+/*link color and hover affect*/
+a:visited,
+a:link {
+  color: #cd7213;
+}
+a:hover,
+a:focus {
+  color: #cd7213;
+}
+.banner-spacing {
+  padding-right: 60px;
+}
+.text {
+  color: #ec9333;
+  font-size: 17px;
+}
+.icon {
+  width: 20%;
+  justify-self: flex-start;
+}
+/* styling for nav bar current selection */
+.active {
+  background-color: #16253d;
+}
+
+@media screen and (max-width: 1550px) {
+  .profile {
+    /* display: block; */
+    margin: 0;
+    width: 25%;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    size: 3rem;
+    
+  }
+  .li-2 {
+    margin-left: 0;
+    margin-top: 1rem;
+    padding: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .drop{
+    width: 96.5%;
+  }
+  .single {
+    width: 96.5%;
+
+  }
+}
+
+/*following code is for when screen is minimized. 
+Such as for a Iphone*/
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: row;
+  }
+  .profile {
+    margin: 0;
+    width: 50%;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 5rem;
+    size: 3rem;
+  }
+  .name {
+    color: #ec9333;
+    text-shadow: 2px 2px 0px #200c0c;
+    font-size: 29px;
+  }
+  .text {
+    color: #ec9333;
+    font-size: 17px;
+    margin: 1.5rem;
+    justify-self: center;
+  }
+  .btn1 {
+    align-self: center;
+    width: 270px;
+    height: 75px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    top: 1rem;
+    margin: 0rem;
+  }
+  .banner-spacing {
+    padding-right: 0px;
+  }
+  li {
+    float: none;
+  }
+  .li-2 {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  .drop{
+    width: 100%;
+  }
+  .single {
+    width: 100%;
+
+  }
+
+}
