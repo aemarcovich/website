@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me page</title>
   <style>
     a:visited,
     a:link {
@@ -11,6 +17,9 @@
     }
     .single {
       background-image: url("images/projects-banner.jpg");
+    }
+    .port{
+      height:505px ;
     }
     li {
       float: left;
@@ -27,7 +36,7 @@
     li a:hover:not(.active) {
       background-color: #16253d;
     }
-    username {
+    .username {
       font-weight: bold;
       color: #16253d;
     }
@@ -53,6 +62,7 @@
       background-color: rgb(243, 197, 128);
       border-radius: 7px;
       overflow: hidden;
+      padding: 15px
     }
     .container {
       padding: 0 16px;
@@ -70,9 +80,11 @@
     h1 {
       color: #002c54;
     }
-    h2 {
+    .email {
+      font-size: 1.50rem;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #002c54;
+      margin-right: 7rem
     }
     h3 {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -96,24 +108,68 @@
       cursor: pointer;
       width: 80%;
       margin-bottom: 3px;
-      margin-right: 5px;
+      margin-right: 2rem;
     }
 
     .button:hover {
       background-color: #555;
     }
 
-    @media screen and (max-width: 820px){
+    .email{
+      margin-right: 7rem
+    }
+    .footer {
+      padding: 5px;
+      background-color: #002c54;
+      color: #cd7213;
+      width: 100%;
+    }
+    .containergrid {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+    }
+    @media screen and (max-width:1700px) {
+      .email{
+margin-right: 1rem;
+    }
+    }
+
+    @media screen and (max-width: 1220px){
       .column{
       flex-direction: row;      
-      width: 100.3%;
+      width: 100%;
     }
     .column-two{
       flex-direction: row;
     }
+    .email{
+      margin-right: 9rem;
+    }
+    }
+    @media screen and (max-width: 820px){
+      .email{
+        margin-right: 0;
+        text-align: center;
+      }
+      .port{
+      height:700px;
+    }
+    }
+    .button{
+      margin-left: 4rem;
     }
     @media screen and (max-width: 500px){
-
+      .email{
+        margin-right: 1rem;
+        font-size: 1.25rem;
+    }
+    .port{
+      height:500px;
+    }
+    .wrap{
+      font-size: 120%;
+    }
      .card {
        width: 350px;
       box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
@@ -141,13 +197,11 @@
     }
     
   </style>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About me page</title>
+
+
     <link rel="stylesheet" href="CSS/normalize.css" />
     <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body style="height: 100vh;">
     <ul>
@@ -158,15 +212,15 @@
       <li><a class="active" href="about.html">About Me</a></li>
     </ul>
 
-    <h1 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Welcome</h1>
+    <h1 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 2rem;">Welcome</h1>
 
     <main>
       <div class="container">
-        <div class="column">
-          <div class="card_about">
-            <img src="images/naruto.jpg" alt="self" style="height: 505px;"/>
-            <div style="padding-bottom: 30px;"class="container">
-              <h2 style="margin-right: 7rem">alejandroemarcovich@gmail.com</h2>
+        <div class="column" data-aos="zoom-in-down">
+          <div class="card_about" >
+            <img src="images/ale.JPG" alt="self" class="port"/>
+            <div style="padding-bottom: 30px;" class="container">
+              <h3 class="email wrap">alejandroemarcovich@gmail.com</h3>
               <div class="break"></div>
               <input
                 style="margin-right: 3rem"
@@ -178,8 +232,8 @@
             </div>
           </div>
         </div>
-        <div class="column">
-          <div class="card_about" style="padding: 15px;">
+        <div class="column" data-aos="zoom-in-down">
+          <div class="card_about" style="height: 90%">
                        <h2>Interests:</h2>
             <p>
               I studied to work in programming. I have skills with various comupter
@@ -187,53 +241,89 @@
               </p>
               <p>I enjoy videogames and game
               design. A hobby of mine is to review games I play through, as well as learning how to an develop my own games. See my games page for more. </p>
-            </p>
             <p>
               I also have skills in Adobe Cloud tools. This means software like Premiere, Photoshop, After Affects etc. I have a great interest in video production as well. Check out my films page! 
             </p> 
             <dl>
               <dt><b>Education:</b></dt>
-              <dd>Univeristy of San Francisco-Bachelors Degree in Computer Science</dd>
+              <dd>University of San Francisco-Bachelors Degree in Computer Science</dd>
            </dl>
-            <!-- <h2>Education:</h2>
-            <p style="font-size: 18px">
-              University of San Francisco-BS Degree in Comupter Science
-            </p> -->
             <dl>
               <dt><b>Skills:</b></dt>
               <dd>Java | JavaScrpit | Python | C | C++ | Html | CSS | React | Django | Adobe | Preimere | Photoshop | AfterAAfects</dd>
               <dt><b>Certifications</b></dt>
               <dd>CodeMosh - Html5 and CSS3</dd>
            </dl>
-            <!-- <h2>Skills & Certifications:</h2>
-            <p >Java | JavaScrpit | Python | Adobe | Preimere | Photoshop | AfterAAfects | CodeMosh - Html5 and CSS3 |  </p> -->
             <h2>Where to find me:</h2>
             <div class="grid-container"> 
-               <p><username>LinkedIn:</username> Alejandro Marcovich</p>
-            <p><username>Github:</username> Alejandro Marcovich</p>  <p><username>Instagram:</username> alejandro.marcovich</p>
-            <p><username>Facebook:</username> Alejandro Marcovich</p>
+               <p>LinkedIn: Alejandro Marcovich</p>
+            <p>Github: Alejandro Marcovich</p>  <p>Instagram: alejandro.marcovich</p>
+            <p>Facebook: Alejandro Marcovich</p>
             </div>
 
             <br><br />
           </div>
         </div>
-        <div class="column">
+        <div class="column" data-aos="zoom-in-down">
           <div class="card_about">
             <img src="images/USF.jpg" alt="school" style="height: 500px;"/>
             <div style="padding-bottom: 30px" class="container">
-              <h3>Univeristy of San Francisco</h2>
+              <h3 class="email">University of San Francisco</h3>
               <div class="break"></div>
               <input
-                style="margin-right: 3rem"
                 type="button"
                 class="button"
                 onclick="window.open('//www.usfca.edu/')"
-                value="Visit Univeristy Site"
+                value="Visit University Site"
               />
             </div>
           </div>
         </div>
+        <footer class="footer"> 
+          <div class="containergrid footer_sections">
+            <section class="collapsible collapsible footer_section">
+              <div class="collapsible__header">
+                <h2 class="collapsible__heading footer_heading">Follow</h2>
+                <svg class="icon icon--white collapsible__chevron">
+                  <use xlink:href="images/sprite.svg#chevron"></use>
+                </svg>
+              </div>
+              <div class="collapsible__content">
+                <ul class="list">
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Github</a></li>
+                  <li><a href="//www.linkedin.com/in/alejandro-marcovich-a98ba3155/">LinkedIn</a></li>
+                  <li><a href="#">Facebook</a></li>
+                </ul>
+              </div>
+            </section>
+            <section class="collapsible collapsible footer_section">
+              <div class="collapsible__header">
+                <h2 class="collapsible__heading footer_heading">Explore</h2>
+                <svg class="icon icon--white collapsible__chevron">
+                  <use xlink:href="images/sprite.svg#chevron"></use>
+                </svg>
+              </div>
+              <div class="collapsible__content">
+                <ul class="list">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="projects.html">Software Projects</a></li>
+                  <li><a href="film.html">Film Projects</a></li>
+                </ul>
+              </div>
+            </section>
+            <div class="footer_brand">
+              <p class="footer_copyright">Copyright 2021 Alejandro Marcovich</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+        <script src="js/main.js"></script>
   </body>
 </html>

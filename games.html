@@ -5,13 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/normalize.css" />
-    <link rel="stylesheet" href="CSS/styles.css" />
-    <a href="index.html">Home page</a>
-  </head>
   <style>
       .single {
-    background-image: url("images/film-banner.jpg");
+    background-image: url("images/gaming-banner.jpg");
   }
 
   li a {
@@ -25,15 +21,80 @@
     li a:hover:not(.active) {
       background-color: #16253d;
     }
+    .footer {
+      padding: 5px;
+      background-color: #002c54;
+      color: #cd7213;
+    }
+    .containergrid {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+    }
   </style>
-    <!-- Head contents begin -->
-  <!-- Nav bar contents -->
-  <body>  <ul>
+  <link rel="stylesheet" href="CSS/normalize.css" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body style="height: 90vh;">  <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="projects.html">Production Projects</a></li>
     <li><a href="film.html">Films</a></li>
     <li><a href="games.html">Gaming</a></li>
     <li><a href="about.html">About Me</a></li>
-  </ul></body>
+  </ul>
+  <div class="single">
+    <header>
+      <h1 class="name">AlejandroMarcovich.com</h1>
+    </header>
+  </div>
+  <main>
+    <footer class="footer"> 
+      <div class="containergrid footer_sections">
+        <section class="collapsible collapsible--expanded footer_section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer_heading">Follow</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use xlink:href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Github</a></li>
+              <li><a href="//www.linkedin.com/in/alejandro-marcovich-a98ba3155/">LinkedIn</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible collapsible footer_section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer_heading">Explore</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use xlink:href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Software Projects</a></li>
+              <li><a href="film.html">Film Projects</a></li>
+            </ul>
+          </div>
+        </section>
+        <div class="footer_brand">
+          <p class="footer_copyright">Copyright 2021 Alejandro Marcovich</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/main.js"></script>
+</body>
 
 </html>

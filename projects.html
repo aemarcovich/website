@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/normalize.css" />
-    <link rel="stylesheet" href="CSS/styles.css" />
-  </head>
   <style>
     a:visited,
     a:link {
@@ -21,9 +18,6 @@
     .single {
       background-image: url("images/projects-banner.jpg");
     }
-    li {
-      float: left;
-    }
 
     li a {
       display: block;
@@ -32,7 +26,31 @@
       padding: 14px 16px;
       text-decoration: none;
     }
-
+    .footer {
+      padding: 5px;
+      background-color: #002c54;
+      color: #cd7213;
+      /* position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 50%; */
+      /* height: 40px; */
+    }
+    .break {
+      flex-basis: 100%;
+      height: 2rem;
+    }
+    .containergrid {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+    }
+    .flex-wrapper {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     li a:hover:not(.active) {
       background-color: #16253d;
     }
@@ -49,12 +67,13 @@
     gap: 40px;
     grid-template-columns: auto;
     background-color: #002c54;
-    padding: 1rem;
+    padding: 4rem;
   }
-  .card {
+  .cardpro {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 1px;
     background-color: rgb(243, 197, 128);
+    padding: 2rem;
   }
   p{
       font-size: 25px; 
@@ -68,16 +87,40 @@
       margin-left: 7rem;
     }
     .h1-2{
-      margin-left: 4rem
+      font-size: 40px;
+      margin-left: 6rem
     }
+    @media screen and (max-width: 920px){
+      .grid-container {
+      grid-template-columns: auto;
+    }
+    .card {
+       width: 100%;
+      box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 1px;
+      background-color: rgb(243, 197, 128);
+    }
+    .h1-2{
+      font-size: 40px;
+      margin-left: 9rem
+    }
+    .project1img{
+      height: 500px;
+      margin-left: 20%;
+    }
+  }
   @media screen and (max-width: 500px){
     .card {
        width: 350px;
       box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
       margin: 1px;
       background-color: rgb(243, 197, 128);
+      padding: 1rem;
     }
-
+    .project1img{
+      height: 400px;
+      margin-left: 0;
+    }
     .grid-container {
       grid-template-columns: auto;
     }
@@ -87,7 +130,13 @@
     grid-template-columns: auto;
     background-color: #002c54;
     width: 385px;
+    padding: 1rem;
     
+    
+  }
+  .cardtext{
+    font-size: 1rem;
+    color: #0f2d5e;
   }
     .button{
       margin-left: 2rem;
@@ -104,7 +153,9 @@
       margin-left: 4rem;
     }
     .h1-2{
-      margin-left: 3rem
+      font-size: 20px;
+      margin-left: 25%;
+      
     }
     .column{
       flex-direction: row;
@@ -113,7 +164,7 @@
       flex-direction: row;
     }
     p{
-      text-align: left;
+      /* text-align: left; */
       font-size: 20px; 
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
@@ -124,6 +175,14 @@
   }
   </style>
 
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+
+
+  <body style="height: 90vh;">
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a class="active" href="projects.html">Production Projects</a></li>
@@ -131,46 +190,71 @@
     <li><a href="games.html">Gaming</a></li>
     <li><a href="about.html">About Me</a></li>
   </ul>
-
   <div class="single">
     <header>
-      <h1 class="name">AlejandroMarcovich.com</h1>
-      <nav class="outline">
-        <ul class="banner_list">
-          <li>Production Projects</li>
-          <li>Movie Reviews</li>
-          <li>Gaming</li>
-        </ul>
-      </nav>
+    <h1 class="name">AlejandroMarcovich.com</h1>
     </header>
   </div>
-  <body>
-    <h1 style="text-align: center;  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Software Projects</h1>
-    <div class="grid-container-large">
-      <div class="card" style="padding: 2rem">
+    <h1 style="text-align: center;  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 2rem;">Software Projects</h1>
+    <div class="grid-container-large"  data-aos="zoom-in-left">
+      <div class="cardpro" style="padding: 2rem">
         <div style="grid-column-gap: 200px;" class="grid-container">
-          <!-- <video controls id="myVideo">
-            <source src="videos/You Me and Energy.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> -->
-          <p>What is energy? Why do we need it? And what happens to our bodies when we put a things besides food into it?
-            <br /><br /> We talk all about that in this nice and consise informational video that sure's to give a better understanding of the dos and don'ts of enegry.
-            <br /><br />Produced by: Alejandro Marcovich, Mae Cusack, Murphy Thompson<br /><br />Starring: Mae Cuasack and Alejandro Marcovich<br /><br />Spring 2019</p>
+          <img class="project1img" src="images/ipadscreen.png" alt="screen" data-aos="fade-down"/>
+          <p data-aos="zoom-in-right" class="cardtext">For this project I wanted to work on web development for the front end.
+            <br /><br /> The site is meant to host a number of projects that I have worked on and give an introduction to me and my Interests. 
+            I want it to be an ongoing example of my programming knowledge in HTMl5, CSS, and JavaScript. A complete and intensive look into my understanding into the tools needed for frontend development.
+            
+            <br /><br />It's also meant to log my growth of my UX/UI design skill. As I improve in the field, the idea is that my website will relfect this improvement, resulting in a project 
+            that displays professonalism and effort.  <br /><br />This Project detemostrates a number of concepts like<br /><br />Use Element/Tag<br /><br />
+            HTMl Multimedia(video,sound,animations)<br /><br />Difference between Semantic/Non-Semantic Elements</p>
         </div>
-        <h1 class="h1-2">You Me and Energy</h1>
-      </div>
-      <div class="card" style="padding: 2rem">
-        <div style="grid-column-gap: 200px;" class="grid-container">
-          <!-- <video controls id="myVideo">
-            <source src="videos/Deadline.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> -->
-          <p>With writer's block, procrastionation comes easier than words. We've all had moments feeling stuck, unmotivatied, and just plain bored. Moments where there are a million things we want to do and we're stuck hitting a wall.
-           Here's someone going through the wave of emotions that come with putting off an assignment until last minute.<br /><br /> Proudced by:
-           Alejandro Marcovich and Anita<br /><br />Fall 2018</p> 
-        </div>
-        <h1 class="h1-1">DeadLine</h1>
+        <h2 class="h1-2">Personal Website</h2>
       </div>
     </div>
-  </body>
+    <div class="break"></div>
+    <footer class="footer"> 
+      <div class="containergrid footer_sections">
+        <section class="collapsible collapsible--expanded footer_section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer_heading">Follow</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use xlink:href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Github</a></li>
+              <li><a href="//www.linkedin.com/in/alejandro-marcovich-a98ba3155/">LinkedIn</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible collapsible--expanded footer_section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer_heading">Explore</h2>
+            <svg class="icon icon--white collapsible__chevron">
+              <use xlink:href="images/sprite.svg#chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Software Projects</a></li>
+              <li><a href="film.html">Film Projects</a></li>
+            </ul>
+          </div>
+        </section>
+        <div class="footer_brand">
+          <p class="footer_copyright">Copyright 2021 Alejandro Marcovich</p>
+        </div>
+      </div>
+    </footer>  
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
