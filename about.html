@@ -62,17 +62,24 @@
       background-color: rgb(243, 197, 128);
       border-radius: 7px;
       overflow: hidden;
-      padding: 15px
+      padding: 20px
     }
     .container {
       padding: 0 16px;
       flex-wrap: wrap;
       justify-content: center;
     }
+    p{
+      font-size: 1.2rem;
+    }
 
     .break {
       flex-basis: 100%;
       height: 0;
+    }
+    .aboutheader{
+      font-family: 'Montserrat', sans-serif;
+      color: #002c54;
     }
     img {
       width: 100%;
@@ -89,7 +96,7 @@
     h3 {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #002c54;
-      font-size: 1.75rem;
+      font-size: 2rem;
       margin-right: 7rem
     }
     dt {
@@ -128,6 +135,13 @@
       max-width: 1140px;
       margin: 0 auto;
       display: grid;
+    }
+    p{
+      font-family: Merriweather, Arial, Helvetica, sans-serif;
+    }
+    dd{
+      font-family: Merriweather, Arial, Helvetica, sans-serif;
+      font-size: 1.1rem;
     }
     @media screen and (max-width:1700px) {
       .email{
@@ -197,8 +211,15 @@ margin-right: 1rem;
     }
     
   </style>
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/normalize.css" />
     <link rel="stylesheet" href="CSS/styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -212,7 +233,7 @@ margin-right: 1rem;
       <li><a class="active" href="about.html">About Me</a></li>
     </ul>
 
-    <h1 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 2rem;">Welcome</h1>
+    <h1 style="text-align: center; font-family: 'Montserrat', sans-serif; padding: 2rem; font-size: 3rem;">Welcome</h1>
 
     <main>
       <div class="container">
@@ -233,8 +254,8 @@ margin-right: 1rem;
           </div>
         </div>
         <div class="column" data-aos="zoom-in-down">
-          <div class="card_about" style="height: 90%">
-                       <h2>Interests:</h2>
+          <div class="card_about" style="height: 96%; ">
+                       <h2 class="aboutheader">Interests:</h2>
             <p>
               I studied to work in programming. I have skills with various comupter
               languages and development software. I made this site share a little more about me. 
@@ -254,11 +275,12 @@ margin-right: 1rem;
               <dt><b>Certifications</b></dt>
               <dd>CodeMosh - Html5 and CSS3</dd>
            </dl>
-            <h2>Where to find me:</h2>
+            <h2 class="aboutheader">Where to find me:</h2>
             <div class="grid-container"> 
                <p>LinkedIn: Alejandro Marcovich</p>
             <p>Github: Alejandro Marcovich</p>  <p>Instagram: alejandro.marcovich</p>
             <p>Facebook: Alejandro Marcovich</p>
+            
             </div>
 
             <br><br />
